@@ -1,2 +1,9 @@
-<!-- <h1 class='danger bg-dark'>Hi</h1> -->
-<img class="back" [src]="image">
+<div class="container-fluid back m-0 p-0" [ngStyle]="{background: 'url('+image+ ')'}">
+    <div class="container h-100">
+        <div class="row align-items-center h-100">
+            <div class="col-6 mx-auto weather-info">
+               <app-home></app-home>
+            </div>
+        </div>
+    </div>
+</div>
