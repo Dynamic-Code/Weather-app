@@ -16,12 +16,6 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(){
     
-  //    this.http.get(this.url)
-  //    .subscribe((data:any)=>{
-  //      console.log(data.results[0].urls.full);
-  //      this.image = data.results[4].urls.full;
-  //    })
-
    
     }
 }

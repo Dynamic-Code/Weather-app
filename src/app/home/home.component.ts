@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
        this.lat = precise(pos.lat)
        this.lon = precise(pos.lng)
 
-       const weather ='https://api.openweathermap.org/data/2.5/onecall?lat='+ this.lat +'&lon='+ this.lon +'&exclude=minutely,hourly,alerts&units=metric&appid=d7ad192a5b946fa61b1de0d7821d97fc'
-       const reverselocation = 'http://api.openweathermap.org/geo/1.0/reverse?lat='+ this.lat +'&lon='+ this.lon +'&limit=5&appid=d7ad192a5b946fa61b1de0d7821d97fc'
+       const weather ='https://api.openweathermap.org/data/2.5/onecall?lat='+this.lat+'&lon='+this.lon+'&exclude=minutely,hourly,alerts&units=metric&appid=d7ad192a5b946fa61b1de0d7821d97fc'
+       const reverselocation = 'https://api.openweathermap.org/geo/1.0/reverse?lat='+this.lat+'&lon='+this.lon+'&limit=5&appid=d7ad192a5b946fa61b1de0d7821d97fc'
       console.log(weather);
 
      
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   }
 
   getLocation(reverselocation) {
-    this.http.get(reverselocation).subscribe((data:any)=>{
+    this.http.get(reverselocation).toPromise().then((data:any)=>{
       console.log(data);
       this.city = data[0].name
     })
