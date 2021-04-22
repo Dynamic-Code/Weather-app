@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HomeService } from '../services/home.service';
 
 @Component({
@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
   temp:number
   min_temp:number
   max_temp:number
-  constructor(private homeser:HomeService, private http:HttpClient) { }
+  constructor(private homeservice:HomeService, private http:HttpClient) { }
   
   ngOnInit() {
 
-   this.getPosition().then(pos=>
+   this.homeservice.getPosition().then(pos=>
     {
       function precise(x) {
         return Number.parseFloat(x).toPrecision(6);
@@ -35,60 +35,28 @@ export class HomeComponent implements OnInit {
        const reverselocation = 'https://api.openweathermap.org/geo/1.0/reverse?lat='+this.lat+'&lon='+this.lon+'&limit=5&appid=d7ad192a5b946fa61b1de0d7821d97fc'
       console.log(weather);
 
-     
-      
-       this.getTemp(weather);
-       this.getLocation(reverselocation);
-
-    });
-   
-  }
-
-
-
-  getPosition(): Promise<any>
-  {
-    return new Promise((resolve, reject) => {
-
-      navigator.geolocation.getCurrentPosition(resp => {
-
-          resolve({lng: resp.coords.longitude, lat: resp.coords.latitude});
-        },
-        err => {
-          reject(err);
+       this.homeservice.getTemp(weather).toPromise().then((data:any)=>{
+        //  console.log(data);
+            this.unixTimestampinmilisec=(data.current.dt) * 1000
+            this.description=data.current.weather[0].main
+            this.descriptionId=data.current.weather[0].id
+            this.temp=data.current.temp
+            this.min_temp=data.daily[0].temp.min
+            this.max_temp=data.daily[0].temp.max
+            this.CurrentTime = this.homeservice.getDateTime(this.unixTimestampinmilisec);
+            console.log(this.descriptionId);
         });
+       this.homeservice.getLocation(reverselocation).toPromise().then((data:any)=>{
+        //console.log(data);
+         this.city = data[0].name
+      });
     });
 
-  }
 
-  getLocation(reverselocation) {
-    this.http.get(reverselocation).toPromise().then((data:any)=>{
-      console.log(data);
-      this.city = data[0].name
-    })
-  }
-  getTemp(weather){
-    this.http.get(weather).toPromise().then((data:any)=>{
-    //  console.log(data);
-        this.unixTimestampinmilisec=(data.current.dt) * 1000
-        this.description=data.current.weather[0].main
-        this.descriptionId=data.current.weather[0].id
-        this.temp=data.current.temp
-        this.min_temp=data.daily[0].temp.min
-        this.max_temp=data.daily[0].temp.max
-        this.getDateTime();
-        console.log(this.descriptionId);
-    })
-   }
-
-   getDateTime(){
-    const dateObject = new Date(this.unixTimestampinmilisec)
-    const humanDateFormat = dateObject.toLocaleString()
-    this.CurrentTime = dateObject.toLocaleString("en-us", {hour: "numeric",hour12: false})
-    console.log(this.CurrentTime);
-    
-   }
+    }    
    
-}
+  }
+
+
 
 
