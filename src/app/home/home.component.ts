@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   lat:any
   lon:any
   unixTimestampinmilisec:any
-  CurrentTime:string
+  CurrentTime:number
   description:any
   descriptionId:number
   city:any
@@ -43,8 +43,8 @@ export class HomeComponent implements OnInit {
             this.temp=data.current.temp
             this.min_temp=data.daily[0].temp.min
             this.max_temp=data.daily[0].temp.max
-            this.CurrentTime = this.homeservice.getDateTime(this.unixTimestampinmilisec);
-            console.log(this.descriptionId);
+            this.CurrentTime = Number.parseInt(this.homeservice.getDateTime(this.unixTimestampinmilisec));
+           // console.log(this.descriptionId);
         });
        this.homeservice.getLocation(reverselocation).toPromise().then((data:any)=>{
         //console.log(data);

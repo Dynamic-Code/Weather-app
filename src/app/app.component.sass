@@ -1,12 +1,15 @@
 $dark:#000
+$image:'https://source.unsplash.com/1920x1080/?Haze,weather'
+
 .icons
     height:15rem
 
 .back
     height:100vh
     width: 100vw
+    background-image: url($image)
     background-repeat: no-repeat
-    background-position: center
+    background-size: cover 
 
 .weather-info
     background: transparentize($dark, 0.3)

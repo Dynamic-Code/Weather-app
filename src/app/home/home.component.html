@@ -2,27 +2,27 @@
     <div class="city">{{city}}</div>
      <div>
     <span *ngIf="descriptionId==800">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/clear-night.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/clear-day.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/clear-night.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/clear-day.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==801 || descriptionId==802 || descriptionId==803 || descriptionId==804">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==701 || descriptionId==711 || descriptionId==731 || descriptionId==751 || descriptionId==761 || descriptionId==762 || descriptionId==771 || descriptionId==781">
         <img class="icons" src="./assets/weather_icons/production/fill/all/mist.svg" alt="">   
     </span>
     <span *ngIf="descriptionId==721">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/overcast-night.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/overcast-day.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/overcast-night.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/overcast-day.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==741">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/fog-night.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/fog-day.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/fog-night.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/fog-day.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==600 || descriptionId==601">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-snow.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-snow.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-snow.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-snow.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==602 || descriptionId==622 || descriptionId==621">
         <img class="icons" src="./assets/weather_icons/production/fill/all/snow.svg" alt="">   
@@ -31,37 +31,37 @@
         <img class="icons" src="./assets/weather_icons/production/line/all/sleet.svg" alt="">
     </span>
     <span *ngIf="descriptionId==612 || descriptionId==613">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-sleet.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-sleet.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-sleet.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-sleet.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==615 || descriptionId==616 || descriptionId==620">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-snow.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-snow.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-snow.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-snow.svg" alt="">    
     </span>
 
     
     <span *ngIf="descriptionId==500 || descriptionId==501">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-rain.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-rain.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-rain.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-rain.svg" alt="">    
     </span>    
     <span *ngIf="descriptionId==502 || descriptionId==503">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-rain.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-rain.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-rain.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-rain.svg" alt="">    
     </span>     
     <span *ngIf="descriptionId==504 || descriptionId==511">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-rain.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-rain.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-rain.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-rain.svg" alt="">    
     </span>     
     <span *ngIf="descriptionId==520 || descriptionId==521">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-drizzle.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-drizzle.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-night-drizzle.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/fill/all/partly-cloudy-day-drizzle.svg" alt="">    
     </span>     
     <span *ngIf="descriptionId==522 || descriptionId==531">
         <img class="icons" src="./assets/weather_icons/production/fill/all/drizzle.svg" alt="">    
     </span>     
     <span *ngIf="descriptionId==300 || descriptionId==301 || descriptionId==302">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-drizzle.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-drizzle.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-night-drizzle.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/partly-cloudy-day-drizzle.svg" alt="">    
     </span>     
     <span *ngIf="descriptionId==310 || descriptionId==311 || descriptionId==312 || descriptionId==313 || descriptionId==314 || descriptionId==321">
         <img class="icons" src="./assets/weather_icons/production/line/all/drizzle.svg" alt="">    
@@ -69,15 +69,15 @@
 
      
     <span *ngIf="descriptionId==200 || descriptionId==201 || descriptionId==202 || descriptionId==210">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-night.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-day.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-night.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-day.svg" alt="">    
     </span>
     <span *ngIf="descriptionId==211 || descriptionId==212 || descriptionId==221">
         <img class="icons" src="./assets/weather_icons/production/fill/all/thunderstorms.svg" alt="">
     </span> 
     <span *ngIf="descriptionId==230 || descriptionId==231 || descriptionId==232">
-        <img *ngIf="CurrentTime>='18'" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-night-rain.svg" alt="">
-        <img *ngIf="CurrentTime<'18'" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-day-rain.svg" alt="">    
+        <img *ngIf="CurrentTime>=18" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-night-rain.svg" alt="">
+        <img *ngIf="CurrentTime<18" class="icons" src="./assets/weather_icons/production/line/all/thunderstorms-day-rain.svg" alt="">    
     </span>
     </div>
 
@@ -93,5 +93,4 @@
             <label class="text-center">Max</label>
         </span>
     </div >
-    <button type="button" class="btn btn-info mb-4">More Details</button>
  </div>
